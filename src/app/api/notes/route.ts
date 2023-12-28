@@ -23,3 +23,9 @@ export async function POST(request: NextRequest) {
 
   return NextResponse.json(newNote, { status: 201 });
 }
+
+export async function GET() {
+  const allNote = await prisma.notes.findMany();
+
+  return NextResponse.json(allNote, { status: 200 });
+}
