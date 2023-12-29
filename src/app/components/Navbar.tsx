@@ -4,17 +4,22 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="sticky top-0 z-10 bg-white py-6">
       <div className="max-w-screen-lg flex flex-row justify-between items-center mx-auto">
         <Breadcrumb>
           <BreadcrumbItem isCurrentPage>
-            <BreadcrumbLink as={Link} href="/">
+            <BreadcrumbLink
+              as={Link}
+              href="/"
+              fontSize={"large"}
+              fontWeight={800}
+            >
               Dashboard
             </BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
 
-        <Link href="/new">New Notes</Link>
+        <Link href="/create">New Notes</Link>
       </div>
     </nav>
   );

@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ChakraProvider>
           <Navbar />
-          <div className="max-w-lg mx-auto">{children}</div>
+          {children}
         </ChakraProvider>
       </body>
     </html>
